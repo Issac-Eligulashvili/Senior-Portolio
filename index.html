@@ -35,9 +35,19 @@
         <p class="navLink">Contact</p>
       </div>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-9 overflow-hidden">
-            <p class="text-center nameMarquee">ISSAC ELIGULASHVILI</p>
+        <div class="firstSection">
+          <div
+            class="row justify-content-center"
+            :style="{ height: containerHeight + 'px' }"
+          >
+            <div
+              class="col-9 overflow-x-hidden nameContainer"
+              v-for="(name, index) in nameArray"
+              :style="{transform: `translateY(${index * -60}px)`}"
+              :class="{ 'rotate': index % 2 === 1 }"
+            >
+              <p class="text-center nameMarquee">{{name}}</p>
+            </div>
           </div>
         </div>
       </div>

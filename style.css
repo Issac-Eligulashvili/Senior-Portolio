@@ -12,6 +12,7 @@ body {
      margin: 0;
      width: fit-content;
      font-family: "Tex";
+     
 }
 
 .navContainer {
@@ -29,6 +30,15 @@ body {
      color: white;
      font-size: 128px;
      text-wrap: nowrap;
+}
+.firstSection {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+}
+
+.rotate {
+     transform: rotateX(3.142rad);
 }
 
 #feintCursorFollow {
