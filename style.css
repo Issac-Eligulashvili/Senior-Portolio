@@ -1,0 +1,72 @@
+@font-face {
+     font-family: "Tex";
+     src: url('fonts/tex.otf');
+}
+
+body {
+     background: #141414;
+}
+
+.navLink {
+     color: white;
+     margin: 0;
+     width: fit-content;
+     font-family: "Tex";
+}
+
+.navContainer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: fit-content;
+     position: fixed;
+     top: 32px;
+     left: 32px;
+}
+
+.nameMarquee {
+     font-family: "Tex";
+     color: white;
+     font-size: 128px;
+     text-wrap: nowrap;
+}
+
+#feintCursorFollow {
+     background: white;
+     position: absolute;
+     aspect-ratio: 1/1;
+     filter: blur(50px);
+     opacity: 0.1;
+     width: 30%;
+     border-radius: 50%;
+     z-index: -1;
+     animation: changeShape 8s ease-in-out, rotateBlob 12s linear;
+}
+
+@keyframes rotateBlob {
+     from {
+          transform: rotate(0deg);
+     }
+
+     to {
+          transform: rotate(360deg);
+     }
+}
+
+
+@keyframes changeShape {
+     0%, 100% {
+          border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%;
+     }
+     20% {
+          border-radius: 40% 65% 50% 50% / 40% 35% 35% 65%;
+     }
+     40% {
+     border-radius: 35% 65% 65% 35% / 65% 50% 50% 25%;
+     } 60% {
+          border-radius: 40% 65% 50% 50% / 30% 30% 70% 75%;
+     }
+     80%{
+     border-radius: 40% 60% 50% 50% / 30% 30% 70% 75%;
+     }
+}
