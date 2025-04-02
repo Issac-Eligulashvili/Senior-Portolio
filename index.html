@@ -37,16 +37,17 @@
       <div class="container-fluid">
         <div class="firstSection">
           <div
-            class="row justify-content-center"
+            class="row justify-content-center w-100"
             :style="{ height: containerHeight + 'px' }"
           >
             <div
               class="col-9 overflow-x-hidden nameContainer"
               v-for="(name, index) in nameArray"
-              :style="{transform: `translateY(${index * -60}px)`}"
-              :class="{ 'rotate': index % 2 === 1 }"
+              :style="{transform: `translateY(${index * -60}px) ${index % 2 === 1 ? 'rotate(3.145rad)' : ''}`}"
+              class="nameContainer"
             >
-              <p class="text-center nameMarquee">{{name}}</p>
+              <p class="text-center nameMarquee" class="delay1">{{name}}</p>
+              <p class="text-center nameMarquee" class="delay2">{{name}}</p>
             </div>
           </div>
         </div>

@@ -7,6 +7,9 @@ const app = Vue.createApp({
      methods: {
           updateElements() {
                this.$forceUpdate(); // Forces Vue to recompute the computed property
+          },
+          calculateStyle(index) {
+                
           }
      },
      mounted() {

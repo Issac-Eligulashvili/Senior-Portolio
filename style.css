@@ -3,8 +3,13 @@
      src: url('fonts/tex.otf');
 }
 
+:root {
+     --gap: 1rem;
+}
+
 body {
      background: #141414;
+     overflow-x: hidden;
 }
 
 .navLink {
@@ -36,11 +41,6 @@ body {
      display: flex;
      align-items: center;
 }
-
-.rotate {
-     transform: rotateX(3.142rad);
-}
-
 #feintCursorFollow {
      background: white;
      position: absolute;
@@ -51,6 +51,29 @@ body {
      border-radius: 50%;
      z-index: -1;
      animation: changeShape 8s ease-in-out, rotateBlob 12s linear;
+}
+
+.nameContainer {
+     display: flex;
+     gap: var(--gap);
+}
+
+.nameMarquee {
+     animation: scroll 20s linear infinite;
+}
+
+.delay1 {
+     animation-delay: calc(20s / 2 * (2 - 1) * -1);
+}
+
+.delay2 {
+     animation-delay: calc(20s / 2 * (2 - 2) * -1);
+}
+
+@keyframes scroll {
+     to {
+          transform: translateX(calc((-100% - var(--gap))));
+     }
 }
 
 @keyframes rotateBlob {
