@@ -7,11 +7,27 @@
      --gap: 1rem;
 }
 
+html,body {
+     scroll-snap-type: y proximity;
+     scroll-behavior: smooth;
+
+}
+
 body {
      background: #141414;
      overflow-x: hidden;
+     
 }
-
+.dot {
+     background-color: white;
+     border-radius: 50%;
+     width: 16px;
+     height: 16px;
+     
+}
+.section {
+     scroll-snap-align: start;
+}
 .navLink {
      color: white;
      margin: 0;
@@ -41,6 +57,17 @@ body {
      display: flex;
      align-items: center;
 }
+.secondSection {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+}
+.header {
+     color: white;
+     font-size: 128px;
+     font-family: "tex";
+}
+
 #feintCursorFollow {
      background: white;
      position: absolute;

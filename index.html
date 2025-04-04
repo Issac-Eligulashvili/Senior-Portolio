@@ -35,7 +35,7 @@
         <p class="navLink">Contact</p>
       </div>
       <div class="container-fluid">
-        <div class="firstSection position-relative">
+        <div class="firstSection section position-relative">
           <div
             class="row justify-content-center w-100"
             :style="{ height: containerHeight + 'px' }"
@@ -51,6 +51,15 @@
             </div>
           </div>
           <p class="scrollNoti">· SCROLL ·</p>
+        </div>
+        <div class="secondSection section position-relative">
+          <h1 class="header">My Work</h1>
+          <div class="row">
+            <div class="col-10 d-flex" v-for="(project, index) in projects">
+              <div class="dot me-2"></div>
+              <div class="image"></div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
