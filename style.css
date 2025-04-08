@@ -59,13 +59,58 @@ body {
 }
 .secondSection {
      height: 100vh;
-     display: flex;
-     justify-content: center;
+     display: grid;
+     grid-template-rows: 192px 1fr 128px;
 }
 .header {
      color: white;
      font-size: 128px;
      font-family: "tex";
+}
+.image {
+     background: red;
+     height: 100%;
+     width: 100%;
+}
+.viewAllButton > p {
+     font-family: "tex";
+     position: relative;
+}
+
+.viewAllButton > p:after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     /* transform: scaleX(0); */
+     height: 2px;
+     background: white;
+     transition: 0.3s;
+}
+.viewAllButton > img {
+     width: 24px;
+     transform: translateY(2px);
+     transition: 0.3s;
+}
+.viewAllButton:hover > img {
+     transform: translateX(10px) translateY(2px);
+}
+.viewAllButton:hover p:after {
+     /* transform: scaleX(1); */
+     width: 100%;
+}
+.progressLine {
+     height: calc( 200% + 10px);
+     position: absolute;
+     width: 3px;
+     background: white;
+     top: 50%;
+     left: calc(12px + 8px);
+}
+
+.viewAllButton:hover {
+     cursor: pointer;
 }
 
 #feintCursorFollow {

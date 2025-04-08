@@ -52,12 +52,24 @@
           </div>
           <p class="scrollNoti">· SCROLL ·</p>
         </div>
-        <div class="secondSection section position-relative">
-          <h1 class="header">My Work</h1>
-          <div class="row">
-            <div class="col-10 d-flex" v-for="(project, index) in projects">
+        <div class="secondSection section position-relative flex-column">
+          <h1 class="header text-center">My Work</h1>
+          <div class="row justify-content-center gy-2 position-relative">
+            <div
+              class="col-10 d-flex align-items-center position-relative"
+              v-for="(project, index) in projects"
+            >
+              <div class="progressLine p-0 m-0" v-if="index == 0"></div>
               <div class="dot me-2"></div>
               <div class="image"></div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-10 d-flex align-items-center">
+              <div class="viewAllButton d-flex align-items-center">
+                <p class="text-white m-0">View All Projects</p>
+                <img src="img/arrow_right.svg" />
+              </div>
             </div>
           </div>
         </div>
