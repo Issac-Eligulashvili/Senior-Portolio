@@ -44,6 +44,7 @@ body {
      position: fixed;
      top: 32px;
      left: 32px;
+     z-index: 10000000;
 }
 
 .nameMarquee {
@@ -99,6 +100,27 @@ body {
 .viewAllButton:hover p:after {
      /* transform: scaleX(1); */
      width: 100%;
+}
+.smallDot {
+     background: #8ecae6;     
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     filter: blur(3px);
+     margin-right: 10px;
+     transform: translateY(1px);
+     opacity: 0;
+     transition: 0.3s;
+}
+.cont {
+     display: flex;
+     align-items: center ;
+}
+.cont:hover {
+     cursor: pointer;
+}
+.cont:hover > .smallDot {
+     opacity: 1;
 }
 .progressLine {
      height: calc( 200% + 10px);
