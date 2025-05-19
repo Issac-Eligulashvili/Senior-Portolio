@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Projects</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -31,13 +31,13 @@
       <div class="navContainer">
         <div class="cont">
           <div class="smallDot"></div>
-          <a href="#home">
+          <a href="index.html#home">
             <p class="navLink">Home</p>
           </a>
         </div>
         <div class="cont">
           <div class="smallDot"></div>
-          <a href="#projects"><p class="navLink">Projects</p></a>
+          <a href="index.html#projects"><p class="navLink">Projects</p></a>
         </div>
         <div class="cont">
           <div class="smallDot"></div>
@@ -46,52 +46,6 @@
         <div class="cont">
           <div class="smallDot"></div>
           <p class="navLink">Contact</p>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="firstSection section position-relative" id="home">
-          <div
-            class="row justify-content-center w-100"
-            :style="{ height: containerHeight + 'px' }"
-          >
-            <div
-              class="col-9 overflow-x-hidden nameContainer"
-              v-for="(name, index) in nameArray"
-              :style="{transform: `translateY(${index * -60}px) ${index % 2 === 1 ? 'rotate(3.145rad)' : ''}`}"
-              class="nameContainer"
-            >
-              <p class="text-center nameMarquee" class="delay1">{{name}}</p>
-              <p class="text-center nameMarquee" class="delay2">{{name}}</p>
-            </div>
-          </div>
-          <p class="scrollNoti">· SCROLL ·</p>
-        </div>
-        <div
-          class="secondSection section position-relative flex-column"
-          id="projects"
-        >
-          <h1 class="header text-center">Featured Projects</h1>
-          <div class="row justify-content-center gy-2 position-relative">
-            <div
-              class="col-10 d-flex align-items-center position-relative"
-              v-for="(project, index) in projects"
-            >
-              <div class="progressLine p-0 m-0" v-if="index == 0"></div>
-              <div class="dot me-2"></div>
-              <div class="image"></div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-10 d-flex align-items-center">
-              <a
-                class="viewAllButton d-flex align-items-center"
-                href="projects.html"
-              >
-                <p class="text-white m-0">View All Projects</p>
-                <img src="img/arrow_right.svg" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </main>
@@ -110,7 +64,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
@@ -118,6 +71,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- My JS -->
-    <script src="index.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>

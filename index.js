@@ -44,7 +44,7 @@ document.addEventListener("mousemove", (e) =>{
      blob.animate({
           top: `${e.clientY - (blob.offsetHeight / 2)}px`,
           left: `${e.clientX - (blob.offsetWidth / 2)}px`
-     }, {duration: 1000, fill: "forwards"})
+     }, {duration: 375, fill: "forwards"})
 })
 
   let sections = document.querySelectorAll(".section");

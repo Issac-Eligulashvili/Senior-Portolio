@@ -36,6 +36,10 @@ body {
      
 }
 
+a {
+     text-decoration: none;
+}
+
 .navContainer {
      display: flex;
      flex-direction: column;
