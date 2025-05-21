@@ -13,6 +13,10 @@ html,body {
 
 }
 
+html,body,main {
+     height: 100%;
+}
+
 body {
      background: #141414;
      overflow-x: hidden;
@@ -73,9 +77,11 @@ a {
      font-family: "tex";
 }
 .image {
-     background: red;
      height: 100%;
      width: 100%;
+     background-size: cover;
+     background-position: center;
+     background-color: red;
 }
 .viewAllButton > p {
      font-family: "tex";
@@ -175,6 +181,38 @@ a {
      right: 32px;
      bottom: 32px;
      font-family: "tex";
+}
+
+.box-container {
+     position: relative;
+     height: 70%;
+     width: 100%;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+}
+
+.box-1 {
+     background-color: #3C91E6;
+     position: absolute;
+}
+
+.box-1.config1 {
+     width: 5%;
+     height: 30%;
+     top: 30%;
+}
+
+.box-2 {
+     background-color: #F2ADB9;
+     position: absolute;
+}
+
+.box-2.config1 {
+     width: 8%;
+     height: 50%;
+     top: 30%;
+
 }
 
 @keyframes scroll {
