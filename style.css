@@ -184,7 +184,7 @@ a {
      font-family: "tex";
 }
 
-.box-container {
+#wrapper {
      position: relative;
      aspect-ratio: 1.618;
      width: 90vmin;
@@ -196,62 +196,67 @@ a {
 .box-1 {
      background-color: #3C91E6;
      position: absolute;
+     transition: height  0.3s;
 }
 
 .box-2 {
      background-color: #F2ADB9;
      position: absolute;
+     transition: height  0.3s;
 }
 
 .box-3 {
      background: #8BCA98;
      position: absolute;
+     transition: height  0.3s;
 }
 
 .box-4 {
      background: #FF3549;
      position: absolute;
+     transition: height  0.3s;
 }
 
 .box-5 {
      background: #6B4E71;
      position: absolute;
+     transition: height  0.3s;
 }
 
-.box-container.config1 {
+#wrapper.config1 {
      --spacer: 7%;
 }
 
 
-.box-container.config1 > .box-1 {
+#wrapper.config1 > .box-1 {
      width: 8%;
      height: 50%;
      top: 0;
      left: var(--spacer);
 }
 
-.box-container.config1 > .box-2 {
+#wrapper.config1 > .box-2 {
      width: 15%;
      height: 70%;
      top: 0;
      left: calc(8% + var(--spacer));
 }
 
-.box-container.config1 > .box-3 {
+#wrapper.config1 > .box-3 {
      width: 15%;
      height: 70%;
      top: 20%;
      left: calc(23% + var(--spacer));
 }
 
-.box-container.config1 > .box-4 {
+#wrapper.config1 > .box-4 {
      width: 8%;
      height: 50%;
      top: 20%;
      left:calc(38% + var(--spacer));
 }
 
-.box-container.config1 > .box-5 {
+#wrapper.config1 > .box-5 {
      width: 40%;
      height: 100%;
      top: 0%;
@@ -260,11 +265,11 @@ a {
 
 /* animation configuration number 2 */
 
-.box-container.config2 {
+#wrapper.config2 {
      --spacer: 4%;
 }
 
-.box-container.config2 > .box-1 {
+#wrapper.config2 > .box-1 {
      width: 15%;
      height: 50%;
      top: 0;
@@ -272,7 +277,7 @@ a {
      border-radius:30px;
 }
 
-.box-container.config2 > .box-2 {
+#wrapper.config2 > .box-2 {
      width: 30%;
      height: 50%;
      top: 50%;
@@ -280,7 +285,7 @@ a {
      border-radius: 50px;
 }
 
-.box-container.config2 > .box-3 {
+#wrapper.config2 > .box-3 {
      width: 22%;
      height: 100%;
      top: 0%;
@@ -288,7 +293,7 @@ a {
      left: calc(30% + var(--spacer));
 }
 
-.box-container.config2 > .box-4 {
+#wrapper.config2 > .box-4 {
      width: 15%;
      height: 50%;
      top: 0%;
@@ -296,7 +301,7 @@ a {
      border-radius: 30px;
 }
 
-.box-container.config2 > .box-5 {
+#wrapper.config2 > .box-5 {
      width: 40%;
      height: 100%;
      top: 0%;
@@ -306,11 +311,11 @@ a {
 
 /* animation configuration number 3 */
 
-.box-container.config3 {
+#wrapper.config3 {
      --spacer: 2.5%;
 }
 
-.box-container.config3 > .box-1 {
+#wrapper.config3 > .box-1 {
      width: 18%;
      aspect-ratio: 1;
      top: 15%;
@@ -318,7 +323,7 @@ a {
      border-radius:50%;
 }
 
-.box-container.config3 > .box-2 {
+#wrapper.config3 > .box-2 {
      width: 35%;
      aspect-ratio: 1;
      top: 47%;
@@ -326,7 +331,7 @@ a {
      border-radius: 50%;
 }
 
-.box-container.config3 > .box-3 {
+#wrapper.config3 > .box-3 {
      width: 22%;
      aspect-ratio: 1;
      top: 50%;
@@ -335,7 +340,7 @@ a {
      z-index: 1;
 }
 
-.box-container.config3 > .box-4 {
+#wrapper.config3 > .box-4 {
      width: 30%;
      aspect-ratio: 1;
      top: 0%;
@@ -344,7 +349,7 @@ a {
      z-index: 1;
 }
 
-.box-container.config3 > .box-5 {
+#wrapper.config3 > .box-5 {
      width: 60%;
      aspect-ratio: 1;
      top: 0%;
