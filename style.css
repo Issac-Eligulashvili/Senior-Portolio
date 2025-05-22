@@ -258,10 +258,11 @@ a {
      left: calc(46% + var(--spacer));
 }
 
+/* animation configuration number 2 */
+
 .box-container.config2 {
      --spacer: 4%;
 }
-/* animation configuration number 2 */
 
 .box-container.config2 > .box-1 {
      width: 15%;
@@ -302,6 +303,57 @@ a {
      left: calc(52% + var(--spacer));
      border-radius: 50px;
 }
+
+/* animation configuration number 3 */
+
+.box-container.config3 {
+     --spacer: 2.5%;
+}
+
+.box-container.config3 > .box-1 {
+     width: 18%;
+     aspect-ratio: 1;
+     top: 15%;
+     left: var(--spacer);
+     border-radius:50%;
+}
+
+.box-container.config3 > .box-2 {
+     width: 35%;
+     aspect-ratio: 1;
+     top: 47%;
+     left: var(--spacer);
+     border-radius: 50%;
+}
+
+.box-container.config3 > .box-3 {
+     width: 22%;
+     aspect-ratio: 1;
+     top: 50%;
+     border-radius: 50%;
+     left: calc(35% + var(--spacer));
+     z-index: 1;
+}
+
+.box-container.config3 > .box-4 {
+     width: 30%;
+     aspect-ratio: 1;
+     top: 0%;
+     left: calc(19% + var(--spacer));
+     border-radius: 50%;
+     z-index: 1;
+}
+
+.box-container.config3 > .box-5 {
+     width: 60%;
+     aspect-ratio: 1;
+     top: 0%;
+     left: calc(35% + var(--spacer));
+     border-radius: 50%;
+}
+
+
+
 
 @keyframes scroll {
      to {
