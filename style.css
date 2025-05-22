@@ -5,6 +5,7 @@
 
 :root {
      --gap: 1rem;
+     --spacer: 0;
 }
 
 html,body {
@@ -185,8 +186,8 @@ a {
 
 .box-container {
      position: relative;
-     height: 70%;
-     width: 100%;
+     aspect-ratio: 1.618;
+     width: 90vmin;
      justify-content: center;
      display: flex;
      align-items: center;
@@ -197,22 +198,63 @@ a {
      position: absolute;
 }
 
-.box-1.config1 {
-     width: 5%;
-     height: 30%;
-     top: 30%;
-}
-
 .box-2 {
      background-color: #F2ADB9;
      position: absolute;
 }
 
-.box-2.config1 {
+.box-3 {
+     background: #8BCA98;
+     position: absolute;
+}
+
+.box-4 {
+     background: #FF3549;
+     position: absolute;
+}
+
+.box-5 {
+     background: #6B4E71;
+     position: absolute;
+}
+
+.box-container.config1 {
+     --spacer: 7%;
+}
+
+.box-container.config1 > .box-1 {
      width: 8%;
      height: 50%;
-     top: 30%;
+     top: 0;
+     left: var(--spacer);
+}
 
+.box-container.config1 > .box-2 {
+     width: 15%;
+     height: 70%;
+     top: 0;
+     left: calc(8% + var(--spacer));
+}
+
+.box-container.config1 > .box-3 {
+     width: 15%;
+     height: 70%;
+     top: 20%;
+     left: calc(23% + var(--spacer));
+}
+
+.box-container.config1 > .box-4 {
+     width: 8%;
+     height: 50%;
+     top: 20%;
+     left:calc(38% + var(--spacer));
+}
+
+.box-container.config1 > .box-5 {
+     width: 40%;
+     height: 100%;
+     top: 0%;
+     left: calc(46% + var(--spacer));
 }
 
 @keyframes scroll {
