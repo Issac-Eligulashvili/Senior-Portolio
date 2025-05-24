@@ -12,6 +12,7 @@ html,body {
      scroll-snap-type: y proximity;
      scroll-behavior: smooth;
 
+
 }
 
 html,body,main {
@@ -21,8 +22,12 @@ html,body,main {
 body {
      background: #141414;
      overflow-x: hidden;
-     
 }
+
+* {
+     cursor: url('img/cursor/Normal\ Select.png'), auto;
+}
+
 .dot {
      background-color: white;
      border-radius: 50%;
@@ -54,6 +59,12 @@ a {
      top: 32px;
      left: 32px;
      z-index: 10000000;
+     transform: translate(0,0);
+     transition: all 1s;
+}
+
+.navContainer.hide {
+     transform: translate(-159px, 0);
 }
 
 .nameMarquee {
@@ -128,7 +139,7 @@ a {
      align-items: center ;
 }
 .cont:hover {
-     cursor: pointer;
+     cursor: url('img/cursor/pointer.png'), auto;
 }
 .cont:hover > .smallDot {
      opacity: 1;
@@ -143,7 +154,7 @@ a {
 }
 
 .viewAllButton:hover {
-     cursor: pointer;
+     cursor: url('img/cursor/pointer.png'), auto
 }
 
 #feintCursorFollow {
@@ -198,6 +209,9 @@ a {
      transition: all 1s;
      transform-origin: center center;
      scale: 1;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
 }
 
 .shape.inactive {
@@ -209,7 +223,7 @@ a {
 }
 
 .box-2 {
-     background-color: #F2ADB9;
+     background-color: #FDAE44;
 }
 
 .box-3 {
@@ -364,13 +378,106 @@ a {
      border-radius: 0 !important;
      z-index: 3;
      transform-origin: center center;
+     pointer-events: none;
 }
 
+.shape.active > * {
+     pointer-events: auto;
+}
 
 .shape:hover {
-     cursor: pointer;
+     cursor: url('img/cursor/pointer.png'), auto;
 }
 
+.shape:hover .text_image {
+     opacity: 1;
+}
+
+.shape .text_image {
+     height: 90%;
+     margin-left: 2rem;
+     opacity: 0;
+     transition: all 400ms;
+}
+
+.shape.active .text_image {
+     opacity: 1;
+}
+
+.box-2 .text_image {
+     filter: brightness(0);
+}
+
+.section-container {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     position: relative;
+     transition: all 1s cubic-bezier(.89,.18,.19,.82);
+}
+
+.goBackBtn, .goFwdBtn {
+     position: fixed;
+     height: 100%;
+     width: 5vw;
+     z-index: 3;
+     display: none;
+}
+
+.goBackBtn {
+     left: 0;
+     top: 0;
+}
+
+.goFwdBtn {
+     top: 0;
+     right: 0;
+}
+
+.shape.active .goBackBtn {
+     display: block;
+}
+.shape.active .goFwdBtn {
+     display: block;
+}
+
+.goBackBtn:hover{
+     cursor: url("img/cursor/left_cursor.png"), auto;
+}
+
+.goFwdBtn:hover {
+     cursor: url("img/cursor/right_cursor.png"), auto;
+}
+
+.slide {
+     height: 100vh;
+     position: relative;
+}
+
+.slide-header {
+     padding: 32px 5vw;
+     position: relative;
+     width: 100%;
+}
+
+.slide-header-image {
+     height: 8px;
+}
+
+.slide-header-close {
+     width: 16px;
+}
+
+.slide-header-close:hover {
+     cursor: url("img/cursor/pointer.png"), auto;
+}
+
+.slide-body {
+     width: 100vw;
+     height: calc(100% - 88px);
+     padding: 0 5vw;
+}
 
 @keyframes scroll {
      to {
