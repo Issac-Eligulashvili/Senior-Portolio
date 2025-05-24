@@ -196,6 +196,12 @@ a {
 .shape {
      position: absolute;
      transition: all 1s;
+     transform-origin: center center;
+     scale: 1;
+}
+
+.shape.inactive {
+     scale: 0;
 }
 
 .box-1 {
@@ -356,12 +362,10 @@ a {
      width: 100vw !important;
      height: 100vh !important;
      border-radius: 0 !important;
-     left: 0 !important;
-     top: 0 !important;
      z-index: 3;
-     position: fixed;
-     transform-origin: center center
+     transform-origin: center center;
 }
+
 
 .shape:hover {
      cursor: pointer;
