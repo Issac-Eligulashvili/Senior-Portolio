@@ -3,6 +3,8 @@
      src: url('fonts/tex.otf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
      --gap: 1rem;
      --spacer: 0;
@@ -429,7 +431,7 @@ a {
 .goBackBtn, .goFwdBtn {
      position: fixed;
      height: 100%;
-     width: 5vw;
+     width: 10vw;
      z-index: 3;
      display: none;
 }
@@ -467,6 +469,10 @@ a {
 .slide-header {
      padding: 32px 5vw;
      width: 100%;
+     transform: translate(0,0);
+     transition: transform 700ms cubic-bezier(.77,.29,.23,.84);
+     position: relative;
+     z-index: 1000;
 }
 
 .slide-header-image {
@@ -475,6 +481,11 @@ a {
 
 .slide-header-close {
      width: 16px;
+     right: 5vw;
+     top: 32px;
+     position: fixed;
+     z-index: 1000;
+     opacity: 0;
 }
 
 .slide-header-close:hover {
@@ -484,13 +495,34 @@ a {
 .slide-body {
      width: 100vw;
      height: calc(100% - 80px);
-     padding: 0 5vw 80px 5vw;
+     padding: 0 10vw 80px 10vw;
 }
 
 .description > p {
      font-size: 9px;
      height: fit-content;
-     font-family: "tex";
+     font-family: "Raleway", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 100;
+     font-style: normal;
+}
+
+.tool-image {
+     height: 50px;
+}
+
+.tool-container {
+     border: black 3px solid ;
+     border-radius: 10px;
+     display: flex;
+     align-items: space-between;
+     flex-direction: column;
+     padding: 10px;
+     height: 100%;
+}
+
+.site-image {
+     border: black 3px solid;
 }
 
 @keyframes scroll {

@@ -54,16 +54,14 @@
         >
         <div class="goBackBtn"></div>
         <div class="goFwdBtn"></div>
+        <img src="img/close.svg" class="slide-header-close" />
         <div class="section-container">
           <div class="slide d-flex align-items-center">
             <img v-bind:src="project.title_svg" class="text_image my-auto" />
           </div>
           <div class="slide">
-            <div
-              class="slide-header d-flex justify-content-between align-items-center"
-            >
-              <img v-bind:src="project.title_svg" class="slide-header-image" />
-              <img src="img/close.svg" class="slide-header-close" />
+            <div class="slide-header d-flex justify-content-between align-items-center">
+                  <img v-bind:src="project.title_svg" class="slide-header-image" />
             </div>
             <div class="slide-body row m-0">
               <div class="col-2 ps-0">
@@ -86,44 +84,36 @@
                 </a>
               </div>
             </div>
-            <div class="slide-footer" style="height: 80px"></div>
+            <div class="slide-footer" style="height: 72px"></div>
           </div>
           <div class="slide">
-            <div
-              class="slide-header d-flex justify-content-between align-items-center"
-            >
-              <img :src="project.title_svg" class="slide-header-image" />
-              <img src="img/close.svg" class="slide-header-close" />
-            </div>
+            <div style="height: 72px;"></div>
             <div
               class="slide-body row m-0 justify-content-center align-items-center"
             >
-              <h1 class="text-center tex w-50">
+              <h1 class="text-center tex">
                 {{project.projectProblem}}
               </h1>
             </div>
-            <div class="slide-footer" style="height: 80px"></div>
+            <div class="slide-footer" style="height: 72px"></div>
           </div>
           <div class="slide">
-            <div
-              class="slide-header d-flex justify-content-between align-items-center"
-            >
-              <img :src="project.title_svg" class="slide-header-image" />
-              <img src="img/close.svg" class="slide-header-close" />
-            </div>
+            <div style="height: 72px;"></div>
             <div
               class="slide-body row m-0 justify-content-center align-items-center"
             >
               <div class="row justify-content-around">
                 <div
-                  class="col-12 col-md-3 d-flex justify-content-center flex-column"
+                  class="col-12 col-md-4 col-lg-3 d-flex justify-content-center flex-column"
                   v-for="(tool) in project.tools"
                 >
-                  <img :src="`img/logos/${tool.name}.svg`" class="w-100" />
+                  <div class="tool-container">
+                    <img :src="`img/logos/${tool.name}.svg`" class="tool-image" />
                   <div class="description">
                     <p class="m-0 mt-2 tex">
                       {{tool.toolDescription}}
                     </p>
+                  </div>
                   </div>
                 </div>
             </div>
