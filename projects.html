@@ -26,7 +26,7 @@
     <header>
       <!-- place navbar here -->
     </header>
-    <main id="app" class="d-flex align-items-center justify-content-center">
+    <main id="app" class="d-flex align-items-center justify-content-center overflow-hidden">
       <div class="navContainer">
         <div class="cont">
           <div class="smallDot"></div>
@@ -48,28 +48,88 @@
         </div>
       </div>
       <div class="config3" id="wrapper">
-        <div class="box-1 shape"></div>
-        <div class="box-2 shape">
-          <div class="goBackBtn"></div>
-          <div class="goFwdBtn"></div>
-          <div class="section-container">
-            <div class="slide d-flex align-items-center">
-              <img src="img/little_bird.svg" class="text_image my-auto" />
+        <div
+          v-for="(project, index) in projects"
+          :class="`shape box-${index+1}`"
+        >
+        <div class="goBackBtn"></div>
+        <div class="goFwdBtn"></div>
+        <div class="section-container">
+          <div class="slide d-flex align-items-center">
+            <img v-bind:src="project.title_svg" class="text_image my-auto" />
+          </div>
+          <div class="slide">
+            <div
+              class="slide-header d-flex justify-content-between align-items-center"
+            >
+              <img v-bind:src="project.title_svg" class="slide-header-image" />
+              <img src="img/close.svg" class="slide-header-close" />
             </div>
-            <div class="slide">
-              <div
-                class="slide-header d-flex justify-content-between align-items-center"
-              >
-                <img src="img/little_bird.svg" class="slide-header-image" />
-                <img src="img/close.svg" class="slide-header-close" />
+            <div class="slide-body row m-0">
+              <div class="col-2 ps-0">
+                <div class="description d-flex align-items-end h-100">
+                  <p>
+                    {{project.siteDescription}}
+                  </p>
+                </div>
               </div>
-              <div class="slide-body"></div>
+              <div class="col-10 d-flex align-items-center pe-0">
+                <a
+                  :href="project.link"
+                  target="_blank"
+                >
+                  <img
+                    :src="project.projectImage"
+                    alt=""
+                    class="site-image img-fluid"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="slide-footer" style="height: 80px"></div>
+          </div>
+          <div class="slide">
+            <div
+              class="slide-header d-flex justify-content-between align-items-center"
+            >
+              <img :src="project.title_svg" class="slide-header-image" />
+              <img src="img/close.svg" class="slide-header-close" />
+            </div>
+            <div
+              class="slide-body row m-0 justify-content-center align-items-center"
+            >
+              <h1 class="text-center tex w-50">
+                {{project.projectProblem}}
+              </h1>
+            </div>
+            <div class="slide-footer" style="height: 80px"></div>
+          </div>
+          <div class="slide">
+            <div
+              class="slide-header d-flex justify-content-between align-items-center"
+            >
+              <img :src="project.title_svg" class="slide-header-image" />
+              <img src="img/close.svg" class="slide-header-close" />
+            </div>
+            <div
+              class="slide-body row m-0 justify-content-center align-items-center"
+            >
+              <div class="row justify-content-around">
+                <div
+                  class="col-12 col-md-3 d-flex justify-content-center flex-column"
+                  v-for="(tool) in project.tools"
+                >
+                  <img :src="`img/logos/${tool.name}.svg`" class="w-100" />
+                  <div class="description">
+                    <p class="m-0 mt-2 tex">
+                      {{tool.toolDescription}}
+                    </p>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
-        <div class="box-3 shape"></div>
-        <div class="box-4 shape"></div>
-        <div class="box-5 shape"></div>
+        </div>
       </div>
     </main>
     <footer>
