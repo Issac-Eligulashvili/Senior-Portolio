@@ -18,6 +18,10 @@
     />
     <!-- Vue CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -110,7 +114,7 @@
                   <div class="tool-container">
                     <img :src="`img/logos/${tool.name}.svg`" class="tool-image" />
                   <div class="description">
-                    <p class="m-0 mt-2 tex">
+                    <p class="m-0 mt-2">
                       {{tool.toolDescription}}
                     </p>
                   </div>

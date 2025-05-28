@@ -63,11 +63,11 @@
           ]
      },
      {
-          "title_svg": "img/svgs/little_bird.svg",
-          "siteDescription": "This responsive, multi-page website was built to showcase a handcrafted toy brand with a clean and playful aesthetic. It features smooth navigation, modern layout design, and engaging visuals that reflect the company's whimsical, family-friendly identity. The site delivers a polished and intuitive user experience that highlights the charm and values of the brand.",
-          "link": "https://ayatsakalla.github.io/Little-Bird-Toy-Company/",
-          "projectImage": "img/projects/little_bird.png",
-          "projectProblem": "For this site I had to combine a lot of unfamiliar tools to make the site as smooth and interactive as possible",
+          "title_svg": "img/svgs/rps.svg",
+          "siteDescription": "This responsive, single-page site showcases a sleek Rock-Paper-Scissors game with clean design and smooth animations. Built for fun and ease of use, it delivers an engaging, interactive experience across all devices.",
+          "link": "https://issac-eligulashvili.github.io/rps/",
+          "projectImage": "img/projects/rps.png",
+          "projectProblem": "A major challenge was maintaining smooth gameplay, which meant handcrafting each animation frame in Photoshop to ensure a seamless and polished user experience.",
           "tools": [
                {
                     "name": "BS",

@@ -3,11 +3,10 @@
      src: url('fonts/tex.otf');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
      --gap: 1rem;
      --spacer: 0;
+     --color: black;
 }
 
 html,body {
@@ -242,6 +241,11 @@ a {
 
 .box-4 {
      background: #FF3549;
+     --color: white;
+}
+
+.box-4 img:not(.site-image, .tool-image) {
+     filter: invert(1);    
 }
 
 .box-5 {
@@ -396,6 +400,11 @@ a {
      opacity: 1;
 }
 
+.shape > * {
+     pointer-events: none;
+     color: var(--color);
+}
+
 .shape:hover {
      cursor: url('img/cursor/pointer.png'), auto;
 }
@@ -413,6 +422,14 @@ a {
 
 .shape.active .text_image {
      opacity: 1;
+}
+
+.text_image:hover {
+     cursor: url("img/cursor/pointer.png"), auto;
+}
+
+.shape.active .text_image:hover {
+     cursor: url("img/cursor/Normal\ Select.png"), auto;
 }
 
 .box-2 .text_image {
@@ -503,7 +520,7 @@ a {
      height: fit-content;
      font-family: "Raleway", sans-serif;
      font-optical-sizing: auto;
-     font-weight: 100;
+     font-weight: 500;
      font-style: normal;
 }
 
@@ -512,7 +529,7 @@ a {
 }
 
 .tool-container {
-     border: black 3px solid ;
+     border: var(--color) 3px solid ;
      border-radius: 10px;
      display: flex;
      align-items: space-between;
@@ -522,7 +539,7 @@ a {
 }
 
 .site-image {
-     border: black 3px solid;
+     border: var(--color) 3px solid;
 }
 
 @keyframes scroll {
