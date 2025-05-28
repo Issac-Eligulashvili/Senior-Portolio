@@ -25,23 +25,26 @@ $(document).ready(function () {
      let hovering = false;
      let active = false;
      let currentSlideIndex = 0;
+     let initialHeight = window.innerHeight;
+     let initialWidth = window.innerWidth;
      setInterval(() => {
           if (!hovering && !active) {
                let configurationArray = ['config1', 'config2', 'config3'];
-          let randInt = Math.floor(Math.random() * 3);
-          while(randInt === previousInt) {
-               randInt = Math.floor(Math.random() * 3);
-          }
-          previousInt = randInt
+               let randInt = Math.floor(Math.random() * 3);
+               while(randInt === previousInt) {
+                    randInt = Math.floor(Math.random() * 3);
+               }
+               previousInt = randInt
      
-          $("#wrapper").removeClass().addClass(configurationArray[randInt])
+               $("#wrapper").removeClass().addClass(configurationArray[randInt])
           }
-     }, 2000);
+     }, 3000);
      $("#app").on("mouseenter", "#wrapper", () => {
           hovering = true;
      })
-     $("#app").on("mouseenter", "#wrapper", () => {
+     $("#app").on("mouseleave", "#wrapper", () => {
           hovering = false;
+          console.log(hovering);
      })
      $("#app").on("click", ".shape", function() {
           const el = $(this)
@@ -127,5 +130,15 @@ $(document).ready(function () {
                }, 1250);
           });
      })
+     $(window).resize(function () { 
+          const sValues = $(".shape.active").css("transform").match(/matrix\(([^)]+)\)/)[1].split(', ');
+          const contValues = $(".shape.active").children().eq(3).css("transform") === "none" ? [0,0,0,0,0,0] : $(".shape.active").children().eq(3).css("transform").match(/matrix\(([^)]+)\)/)[1].split(', ');
+          const dx = window.innerWidth - initialWidth;
+          const dy = window.innerHeight - initialHeight;
+          $(".shape.active").css("transform", `translate(${sValues[4]-dx}px, ${sValues[5]}px)`);
+          console.log(sValues[4]-dx);
+          initialWidth = window.innerWidth;
+          initialHeihgt = window.innerHeight;
+     });
 
 });
