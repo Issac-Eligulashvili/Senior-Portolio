@@ -9,13 +9,6 @@
      --color: black;
 }
 
-html,body {
-     scroll-snap-type: y proximity;
-     scroll-behavior: smooth;
-
-
-}
-
 html,body,main {
      height: 100%;
 }
@@ -184,15 +177,7 @@ a {
 }
 
 .nameMarquee {
-     animation: scroll 20s linear infinite;
-}
-
-.delay1 {
-     animation-delay: calc(20s / 2 * (2 - 1) * -1);
-}
-
-.delay2 {
-     animation-delay: calc(20s / 2 * (2 - 2) * -1);
+     display: inline-block;
 }
 
 .scrollNoti {
@@ -540,12 +525,6 @@ a {
 
 .site-image {
      border: var(--color) 3px solid;
-}
-
-@keyframes scroll {
-     to {
-          transform: translateX(calc((-100% - var(--gap))));
-     }
 }
 
 @keyframes rotateBlob {

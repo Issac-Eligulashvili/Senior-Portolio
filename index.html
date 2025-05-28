@@ -52,17 +52,17 @@
       <div class="container-fluid">
         <div class="firstSection section position-relative" id="home">
           <div
-            class="row justify-content-center w-100"
+            class="row justify-content-center w-100 names-container"
             :style="{ height: containerHeight + 'px' }"
           >
             <div
-              class="col-9 overflow-x-hidden nameContainer"
+              class="col-9 overflow-x-hidden nameContainer p-0"
               v-for="(name, index) in nameArray"
               :style="{transform: `translateY(${index * -60}px) ${index % 2 === 1 ? 'rotate(3.145rad)' : ''}`}"
               class="nameContainer"
             >
-              <p class="text-center nameMarquee" class="delay1">{{name}}</p>
-              <p class="text-center nameMarquee" class="delay2">{{name}}</p>
+              <p class="text-center nameMarquee delay-1">{{name}}</p>
+              <p class="text-center nameMarquee delay-2">{{name}}</p>
             </div>
           </div>
           <p class="scrollNoti">· SCROLL ·</p>
@@ -123,6 +123,7 @@
     ></script>
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <!-- My JS -->
     <script src="index.js"></script>
   </body>

@@ -67,25 +67,27 @@
             <div class="slide-header d-flex justify-content-between align-items-center">
                   <img v-bind:src="project.title_svg" class="slide-header-image" />
             </div>
-            <div class="slide-body row m-0">
-              <div class="col-2 ps-0">
-                <div class="description d-flex align-items-end h-100">
-                  <p>
-                    {{project.siteDescription}}
-                  </p>
+            <div class="slide-body d-flex m-0">
+              <div class="row m-auto" style="height: fit-content;">
+                <div class="col-2 ps-0">
+                  <div class="description d-flex align-items-end h-100">
+                    <p>
+                      {{project.siteDescription}}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-10 d-flex align-items-center pe-0">
-                <a
-                  :href="project.link"
-                  target="_blank"
-                >
-                  <img
-                    :src="project.projectImage"
-                    alt=""
-                    class="site-image img-fluid"
-                  />
-                </a>
+                <div class="col-10 d-flex align-items-center pe-0">
+                  <a
+                    :href="project.link"
+                    target="_blank"
+                  >
+                    <img
+                      :src="project.projectImage"
+                      alt=""
+                      class="site-image img-fluid"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="slide-footer" style="height: 72px"></div>
