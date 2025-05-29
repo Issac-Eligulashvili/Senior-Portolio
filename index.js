@@ -24,7 +24,7 @@ const app = Vue.createApp({
                gsap.to(el, {
                          x: "-100%",
                          scrollTrigger: {
-                         trigger: ".names-container",
+                         trigger: ".firstSection",
                          start: "top top",
                          end: "bottom top",
                          scrub: true,
@@ -52,4 +52,14 @@ const app = Vue.createApp({
           }
      }
 }).mount("#app");
+
+function moveBlob(e) {
+     const blob = document.getElementById("feintCursorFollow");
+     blob.animate({
+          top: `${e.clientY - (blob.offsetHeight / 2)}px`,
+          left: `${e.clientX - (blob.offsetWidth / 2)}px`
+     }, {duration: 1000, fill: "forwards"})
+}
+
+$(".firstSection").on("mousemove", moveBlob);
 
