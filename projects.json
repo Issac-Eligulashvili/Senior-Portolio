@@ -92,15 +92,15 @@
           "tools": [
                {
                     "name": "react",
-                    "toolDescription": "Bootstrap is a front-end framework that provides pre-designed components and a responsive system. On the Little Bird Toy Company website, Bootstrap is used to create a mobile-friendly layout with consistent design across devices. It handles much of the styling for the navigation bar, buttons, and layout sections, helping the site remain clean and visually structured without needing extensive custom CSS."
+                    "toolDescription": "React is a JavaScript library that helped in creating this site and all the live updates it has for both the web and iOS. I used many useStates, and learned the idea of component based development which really sped up the process of creating the website. "
                },
                {
                     "name": "supabase",
-                    "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as dropdown menus and dynamic content updates. On the Little Bird Toy Company site, JavaScript used to manage form inputs and basic site logic, make the user experience more interactive and responsive."
+                    "toolDescription":"Supabase is the database framework that I decided to use for this app. It taught me how to design databases to maintain efficiency and how to use SQL. I also had to learn how to use liveupdates and ensure that only necessary information is given to not overwhelm user's data."
                },
                {
                     "name": "node",
-                    "toolDescription": "jQuery simplifies DOM manipulation and event handling. On this site, it is used for smooth scrolling, simple animations, and handling click events in a concise and readable way. jQuery complements JavaScript by shortening the amount of code needed to achieve interactive features like toggling navigation or showing/hiding content."
+                    "toolDescription": "NodeJS was the environment that I used to build the backend of the app to connect the React frontend to my Supabase databse. I had to learn how to write GET/POST requests and how to ensure security within my websites. I used many different libraries to build the backend, making me familiar with express and axios."
                }
           ]
      }
