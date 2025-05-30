@@ -84,22 +84,22 @@
           ]
      },
      {
-          "title_svg": "img/svgs/little_bird.svg",
-          "siteDescription": "This responsive, multi-page website was built to showcase a handcrafted toy brand with a clean and playful aesthetic. It features smooth navigation, modern layout design, and engaging visuals that reflect the company's whimsical, family-friendly identity. The site delivers a polished and intuitive user experience that highlights the charm and values of the brand.",
+          "title_svg": "img/svgs/agentselect.svg",
+          "siteDescription": "This dynamic, multi-page website was designed for a Valorant esports fantasy league platform with a sleek and competitive aesthetic. It features real-time stats integration, user-friendly team selection, and responsive layouts tailored for both casual fans and esports enthusiasts. The site delivers an engaging and immersive experience that captures the strategic excitement of fantasy gaming within the Valorant community.",
           "link": "https://ayatsakalla.github.io/Little-Bird-Toy-Company/",
-          "projectImage": "img/projects/little_bird.png",
-          "projectProblem": "For this site I had to combine a lot of unfamiliar tools to make the site as smooth and interactive as possible",
+          "projectImage": "img/projects/agentselect.png",
+          "projectProblem": "I had to integrate my own database, while mangaing to continuously fetch player data from websites and create my own chat system with live updates.",
           "tools": [
                {
-                    "name": "BS",
+                    "name": "react",
                     "toolDescription": "Bootstrap is a front-end framework that provides pre-designed components and a responsive system. On the Little Bird Toy Company website, Bootstrap is used to create a mobile-friendly layout with consistent design across devices. It handles much of the styling for the navigation bar, buttons, and layout sections, helping the site remain clean and visually structured without needing extensive custom CSS."
                },
                {
-                    "name": "JS",
+                    "name": "supabase",
                     "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as dropdown menus and dynamic content updates. On the Little Bird Toy Company site, JavaScript used to manage form inputs and basic site logic, make the user experience more interactive and responsive."
                },
                {
-                    "name": "jQ",
+                    "name": "node",
                     "toolDescription": "jQuery simplifies DOM manipulation and event handling. On this site, it is used for smooth scrolling, simple animations, and handling click events in a concise and readable way. jQuery complements JavaScript by shortening the amount of code needed to achieve interactive features like toggling navigation or showing/hiding content."
                }
           ]

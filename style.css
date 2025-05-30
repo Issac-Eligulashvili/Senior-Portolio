@@ -233,8 +233,13 @@ a {
      filter: invert(1);    
 }
 
+.box-5 img:not(.site-image, .tool-image) {
+     filter: invert(1);
+}
+
 .box-5 {
-     background: #6B4E71;
+     background: #52265b;
+     --color: white;     
 }
 
 #wrapper.config1 {
