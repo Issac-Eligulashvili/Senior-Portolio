@@ -87,6 +87,11 @@ a {
 .secondSection {
      height: 100vh;
      display: grid;
+     grid-template-rows: 72px 1fr 72px;
+}
+.thirdSection {
+     height: 100vh;
+     display: grid;
      grid-template-rows: 72px 1fr 128px;
 }
 .header {
