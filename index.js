@@ -2,8 +2,8 @@ const app = Vue.createApp({
      data() {
           return {
                projects: [
-                    {image: "img/wdpp.png", link: ""},
-                    {image: "img/sellmycar.png", link: ""},
+                    {image: "img/wdpp.png", link: "https://www.mrhsteched.com/pages/MRHS_WDPP/index.html"},
+                    {image: "img/sellmycar.png", link: "https://sellmycar-com.onrender.com     "},
                     {image: null, link: ""}
                ]
           }
@@ -32,6 +32,30 @@ const app = Vue.createApp({
                     }
                });
           })
+          
+          $('.image').on('mousemove', function (e) {
+               const $this = $(this);
+               const offset = $this.offset();
+               const width = $this.outerWidth();
+               const height = $this.outerHeight();
+         
+               // Get percentage from center, then invert it
+               const x = 50 + ((e.pageX - offset.left - width / 2) / width) * 30;
+               const y = 50 + ((e.pageY - offset.top - height / 2) / height) * 30;
+         
+               $this.css({
+                 'background-position': `${x}% ${y}%`,
+                 'background-size': "120%"
+               });
+             });
+           
+             $('.image').on('mouseleave', function () {
+               $(this).css({
+                 'background-position': 'center',
+                 'background-size': '100%',
+               });
+             });
+
      },    
      beforeUnmount() {
           window.removeEventListener("resize", this.updateElements);

@@ -71,7 +71,7 @@
           class="secondSection section position-relative flex-column"
           id="projects"
         >
-          <h1 class="header text-center">Featured Projects</h1>
+          <h1 class="header text-center h1">Featured Projects</h1>
           <div class="row justify-content-center gy-2 position-relative">
             <div
               class="col-10 d-flex align-items-center position-relative"
@@ -79,10 +79,12 @@
             >
               <div class="progressLine p-0 m-0" v-if="index == 0"></div>
               <div class="dot me-2"></div>
-              <div
+              <a
                 class="image"
+                :href="project.link"
+                target="_blank"
                 :style="{backgroundImage: `url(${project.image})`}"
-              ></div>
+              ></a>
             </div>
           </div>
           <div class="row justify-content-center">

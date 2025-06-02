@@ -21,9 +21,13 @@ body {
 * {
      cursor: url('img/cursor/Normal\ Select.png'), auto;
 }
+ 
+a:hover {
+     cursor: url("img/cursor/pointer.png"), auto !important;
+}
 
 .site-image:hover {
-     cursor: url("img/cursor/pointer.png"), auto;
+     cursor: url("img/cursor/pointer.png"), auto !important;
 }
 
 .tex {
@@ -83,20 +87,28 @@ a {
 .secondSection {
      height: 100vh;
      display: grid;
-     grid-template-rows: 192px 1fr 128px;
+     grid-template-rows: 72px 1fr 128px;
 }
 .header {
      color: white;
-     font-size: 128px;
+     /* font-size: 128px; */
      font-family: "tex";
 }
 .image {
      height: 100%;
      width: 100%;
-     background-size: cover;
+     background-size: 100%;
      background-position: center;
-     background-color: red;
+     background-repeat: no-repeat;
+     /* background-color: red; */
+     transition: background-size 0.2s ease, background-position 0.1s ease;
+     position: relative;
 }
+
+.image:hover {
+     background-size: 120%; /* zoom in on hover */
+}
+
 .viewAllButton > p {
      font-family: "tex";
      position: relative;
@@ -125,6 +137,11 @@ a {
      /* transform: scaleX(1); */
      width: 100%;
 }
+
+.viewAllButton > *:hover {
+     cursor: url("img/cursor/pointer.png"), auto !important;
+}
+
 .smallDot {
      background: whitesmoke;     
      width: 8px;
@@ -140,7 +157,7 @@ a {
      display: flex;
      align-items: center ;
 }
-.cont:hover {
+.cont:hover,.cont *:hover {
      cursor: url('img/cursor/pointer.png'), auto;
 }
 .cont:hover > .smallDot {
@@ -415,7 +432,7 @@ a {
 }
 
 .text_image:hover {
-     cursor: url("img/cursor/pointer.png"), auto;
+     cursor: url("img/cursor/pointer.png"), auto !important;
 }
 
 .shape.active .text_image:hover {
@@ -496,7 +513,7 @@ a {
 }
 
 .slide-header-close:hover {
-     cursor: url("img/cursor/pointer.png"), auto;
+     cursor: url("img/cursor/pointer.png"), auto !important;
 }
 
 .slide-body {
@@ -511,6 +528,7 @@ a {
      font-optical-sizing: auto;
      font-weight: 500;
      font-style: normal;
+     font-size: .75rem;
 }
 
 .tool-image {
