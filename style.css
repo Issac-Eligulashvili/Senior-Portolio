@@ -549,6 +549,21 @@ a {
      border: var(--color) 3px solid;
 }
 
+#email {
+     opacity: 0;
+     transform: translateY(-100%);
+     display: none;
+     pointer-events: none;
+     transition: all 300ms;
+}
+
+#email.show {
+     opacity: 1;
+     transform: translate(0);
+     display: block;
+     pointer-events: all;
+}
+
 @keyframes rotateBlob {
      from {
           transform: rotate(0deg);

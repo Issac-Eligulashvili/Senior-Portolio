@@ -4,7 +4,7 @@ const app = Vue.createApp({
                projects: [
                     {image: "img/wdpp.png", link: "https://www.mrhsteched.com/pages/MRHS_WDPP/index.html"},
                     {image: "img/sellmycar.png", link: "https://sellmycar-com.onrender.com     "},
-                    {image: null, link: ""}
+                    {image: "img/trunkortreat.png", link: "https://issac-eligulashvili.github.io/Trunk-or-Treat/"}
                ]
           }
      },
@@ -47,14 +47,17 @@ const app = Vue.createApp({
                  'background-position': `${x}% ${y}%`,
                  'background-size': "120%"
                });
-             });
+          });
            
-             $('.image').on('mouseleave', function () {
+          $('.image').on('mouseleave', function () {
                $(this).css({
                  'background-position': 'center',
                  'background-size': '100%',
                });
-             });
+          });
+          $("#contact").on("click", () => {
+               $("#email").toggleClass("show");
+          })
 
      },    
      beforeUnmount() {
@@ -86,4 +89,5 @@ function moveBlob(e) {
 }
 
 $(".firstSection").on("mousemove", moveBlob);
+
 

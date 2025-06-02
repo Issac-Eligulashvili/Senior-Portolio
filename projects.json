@@ -70,12 +70,12 @@
           "projectProblem": "A major challenge was maintaining smooth gameplay, which meant handcrafting each animation frame in Photoshop to ensure a seamless and polished user experience.",
           "tools": [
                {
-                    "name": "BS",
-                    "toolDescription": "Bootstrap is a front-end framework that provides pre-designed components and a responsive system. On the Little Bird Toy Company website, Bootstrap is used to create a mobile-friendly layout with consistent design across devices. It handles much of the styling for the navigation bar, buttons, and layout sections, helping the site remain clean and visually structured without needing extensive custom CSS."
+                    "name": "photoshop",
+                    "toolDescription": "Photoshop is a photo editing software which I used to create the animations of the hands for the website. I had to draw them frame by frame, editing the colors of the base image and keeping the rotations constant for each set of images. It got me familiar with the Photoshop tools and Adobe ecosystem."
                },
                {
                     "name": "JS",
-                    "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as dropdown menus and dynamic content updates. On the Little Bird Toy Company site, JavaScript used to manage form inputs and basic site logic, make the user experience more interactive and responsive."
+                    "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as the AI you play against. On the Rock, Paper, Scissors site, JavaScript is what enabled the username inputs and drives the animations, playing each frame one by one."
                },
                {
                     "name": "jQ",
