@@ -69,6 +69,10 @@ a {
      transition: all 1s;
 }
 
+.navContainer:hover p, .navContainer:hover a {
+     background-color: #141414;
+}
+
 .navContainer.hide {
      transform: translate(-159px, 0);
 }
