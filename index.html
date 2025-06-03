@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Issac Eligulashvili | Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -18,6 +18,12 @@
     />
     <!-- Vue CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- animate.style -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -80,13 +86,13 @@
           <h1 class="header text-center h1">Featured Projects</h1>
           <div class="row justify-content-center gy-2 position-relative">
             <div
-              class="col-10 d-flex align-items-center position-relative"
+              class="col-10 d-flex align-items-center position-relative "
               v-for="(project, index) in projects"
             >
               <div class="progressLine p-0 m-0" v-if="index == 0"></div>
-              <div class="dot me-2"></div>
+              <div class="dot me-2 animate__animated"></div>
               <a
-                class="image"
+                class="image animate__animated"
                 :href="project.link"
                 target="_blank"
                 :style="{backgroundImage: `url(${project.image})`}"

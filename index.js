@@ -58,6 +58,33 @@ const app = Vue.createApp({
           $("#contact").on("click", () => {
                $("#email").toggleClass("show");
           })
+          const observer = new IntersectionObserver(entries => {
+               entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                         const $row = $(entry.target).children().eq(1).children();
+                         const $bar = $row.find(".progressLine");
+                         $bar.addClass("show")
+                         $row.each(function (index, element) {
+                              // element == this
+                              const $image = index === 0 ? $(element).children().eq(2) : $(element).children().eq(1);
+                              const $dot = index === 0 ? $(element).children().eq(1) : $(element).children().eq(0);
+                              setTimeout(() => {
+                                   $dot.addClass("animate__bounceIn show")
+                                   setTimeout(() => {
+                                        $image.addClass("animate__bounceInLeft show");
+                                   }, 1000);
+                              },400 * index);
+                         });
+                         observer.unobserve(entry.target);
+                         return;
+                    }
+               });
+          }, 
+          {    
+               threshold: 0.6
+          })
+
+          observer.observe(document.querySelector("#projects"));
 
      },    
      beforeUnmount() {

@@ -39,7 +39,10 @@ a:hover {
      border-radius: 50%;
      width: 16px;
      height: 16px;
-     
+     opacity: 0;
+}
+.dot.show {
+     opacity: 1;
 }
 .section {
      scroll-snap-align: start;
@@ -112,6 +115,11 @@ a {
      /* background-color: red; */
      transition: background-size 0.2s ease, background-position 0.1s ease;
      position: relative;
+     opacity: 0;
+}
+
+.image.show {
+     opacity: 1;
 }
 
 .image:hover {
@@ -173,12 +181,17 @@ a {
      opacity: 1;
 }
 .progressLine {
-     height: calc( 200% + 10px);
+     height: 0px;
      position: absolute;
      width: 3px;
      background: white;
      top: 50%;
-     left: calc(12px + 8px);
+     left: calc(10px + 8px);
+     transition: 1.2s all;
+}
+
+.progressLine.show {
+     height: calc( 200% + 10px);
 }
 
 .viewAllButton:hover {
