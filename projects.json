@@ -1,22 +1,22 @@
 [
      {
-          "title_svg": "img/svgs/little_bird.svg",
-          "siteDescription": "This responsive, multi-page website was built to showcase a handcrafted toy brand with a clean and playful aesthetic. It features smooth navigation, modern layout design, and engaging visuals that reflect the company's whimsical, family-friendly identity. The site delivers a polished and intuitive user experience that highlights the charm and values of the brand.",
+          "title_svg": "img/svgs/mwok.svg",
+          "siteDescription": "This in-progress, multi-page website is designed to capture the strategic depth and fantasy aesthetic of Mystic Warlords of Ka’a. Built with immersive visuals, smooth navigation, and a thematic layout, it aims to deliver an engaging and intuitive experience for fans of the card game. Once complete, the site will reflect the game's rich lore, competitive energy, and playful complexity.",
           "link": "https://ayatsakalla.github.io/Little-Bird-Toy-Company/",
-          "projectImage": "img/projects/little_bird.png",
-          "projectProblem": "For this site I had to combine a lot of unfamiliar tools to make the site as smooth and interactive as possible",
+          "projectImage": "img/projects/404.jpg",
+          "projectProblem": "For this site I had to take on the challenge of state management and web sockets",
           "tools": [
                {
-                    "name": "BS",
-                    "toolDescription": "Bootstrap is a front-end framework that provides pre-designed components and a responsive system. On the Little Bird Toy Company website, Bootstrap is used to create a mobile-friendly layout with consistent design across devices. It handles much of the styling for the navigation bar, buttons, and layout sections, helping the site remain clean and visually structured without needing extensive custom CSS."
+                    "name": "node",
+                    "toolDescription": "Node.js is a JavaScript runtime that enables server-side functionality. In the Mystic Warlords of Ka’a project, Node is used to handle backend logic, manage routing, and serve dynamic content. It supports features like user authentication and game state management, helping the site respond quickly and reliably to player interactions while keeping the experience smooth and interactive."
                },
                {
                     "name": "JS",
-                    "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as dropdown menus and dynamic content updates. On the Little Bird Toy Company site, JavaScript used to manage form inputs and basic site logic, make the user experience more interactive and responsive."
+                    "toolDescription":"Vanilla JavaScript is used to handle interactive elements and custom animations throughout the site. In the Mystic Warlords of Ka’a project, it controls features like the trailing blob cursor, hover-based background effects, and scroll-triggered visuals. By working directly with the DOM, it allows for smooth, responsive user interactions and precise visual control without relying on external libraries."
                },
                {
-                    "name": "jQ",
-                    "toolDescription": "jQuery simplifies DOM manipulation and event handling. On this site, it is used for smooth scrolling, simple animations, and handling click events in a concise and readable way. jQuery complements JavaScript by shortening the amount of code needed to achieve interactive features like toggling navigation or showing/hiding content."
+                    "name": "Vue",
+                    "toolDescription": "Vue.js is a progressive JavaScript framework used for building responsive, data-driven interfaces. In the Mystic Warlords of Ka’a project, Vue manages dynamic content rendering, user interface state, and component reactivity. It simplifies the structure of the site by organizing interactive elements and enabling seamless updates, helping create a smooth and maintainable front-end experience."
                }
           ]
      },
@@ -78,8 +78,8 @@
                     "toolDescription":"Vanilla JavaScript is used to add interactivity and functionality to the site. It controls behaviors such as the AI you play against. On the Rock, Paper, Scissors site, JavaScript is what enabled the username inputs and drives the animations, playing each frame one by one."
                },
                {
-                    "name": "jQ",
-                    "toolDescription": "jQuery simplifies DOM manipulation and event handling. On this site, it is used for smooth scrolling, simple animations, and handling click events in a concise and readable way. jQuery complements JavaScript by shortening the amount of code needed to achieve interactive features like toggling navigation or showing/hiding content."
+                    "name": "ui",
+                    "toolDescription": "Implemented dynamic scene management by conditionally showing and hiding different game views to guide player flow seamlessly. Real-time updates to health indicators provide instant visual feedback, enhancing user engagement and immersion. This approach ensures a smooth, interactive, and responsive gaming experience across devices."
                }
           ]
      },
